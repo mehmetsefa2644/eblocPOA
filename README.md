@@ -22,10 +22,8 @@ make geth
 #### Node.js and Node Package Manager(npm) installation
 
 ```
-sudo apt-get install nodejs npm
-sudo npm install pm2 -g
-sudo ln -s /usr/bin/nodejs /usr/bin/node
-sudo chown -R $(whoami) $(npm config get prefix)/{lib/node_modules,bin,share} ~/.npm
+install npm, you can easily find on google how to do that,
+npm install pm2 -g
 ```
 
 #### **Go-installation (https://github.com/golang/go/wiki/Ubuntu)**
@@ -34,7 +32,7 @@ sudo chown -R $(whoami) $(npm config get prefix)/{lib/node_modules,bin,share} ~/
 
 #### **Geth Installation (https://github.com/ethereum/go-ethereum/wiki/Installation-Instructions-for-Ubuntu)**
 
-```` just google 'geth installation for windows' :) ```
+``` just google 'geth installation for windows' :) ```
 
 ## **eBloc Setup on Linux and macOS**
 
@@ -43,6 +41,7 @@ sudo chown -R $(whoami) $(npm config get prefix)/{lib/node_modules,bin,share} ~/
 ```bash
 cd $HOME 
 git clone https://github.com/ebloc/eblocPOA.git
+git checkout windows
 
 cd eblocPOA
 git clone https://github.com/cubedro/eth-net-intelligence-api
@@ -50,6 +49,7 @@ git clone https://github.com/cubedro/eth-net-intelligence-api
 cd eth-net-intelligence-api
 npm install
 ```
+## UPDATE THE $DATADIR IN ```initialize.sh, server.sh, client.sh and stats.sh```
 
 ### Initialises a new genesis block and definition for the network 
 :warning: Do `bash initialize.sh` only once. You do not need to do it again :warning:
