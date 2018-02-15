@@ -32,7 +32,7 @@ npm install pm2 -g
 
 #### **Geth Installation (https://github.com/ethereum/go-ethereum/wiki/Installation-Instructions-for-Ubuntu)**
 
-```` just google 'geth installation for windows' :) ```
+``` just google 'geth installation for windows' :) ```
 
 ## **eBloc Setup on Linux and macOS**
 
@@ -49,6 +49,7 @@ git clone https://github.com/cubedro/eth-net-intelligence-api
 cd eth-net-intelligence-api
 npm install
 ```
+## UPDATE THE $DATADIR IN ```initialize.sh, server.sh, client.sh and stats.sh```
 
 ### Initialises a new genesis block and definition for the network 
 :warning: Do `bash initialize.sh` only once. You do not need to do it again :warning:
