@@ -1,3 +1,5 @@
+# **WINDOWS VERSION**
+
 # **Connect into Private Ethereum Blockchain (eBlocPOA)**
 
 ## **Preinstallations**
@@ -28,51 +30,11 @@ sudo chown -R $(whoami) $(npm config get prefix)/{lib/node_modules,bin,share} ~/
 
 #### **Go-installation (https://github.com/golang/go/wiki/Ubuntu)**
 
-```bash
-sudo add-apt-repository ppa:gophers/archive
-sudo apt-get update
-sudo apt-get install golang-1.9-go
-```
-
-- Put this line `export PATH=$PATH:/usr/lib/go-1.9/bin`  into `.profile` file.
+``` just google 'go installation for windows' :) ```
 
 #### **Geth Installation (https://github.com/ethereum/go-ethereum/wiki/Installation-Instructions-for-Ubuntu)**
 
-```bash
-sudo apt-get install git
-sudo apt-get install -y build-essential libgmp3-dev golang
-git clone https://github.com/ethereum/go-ethereum 
-cd go-ethereum/
-git pull
-make geth
-```
-
-After `go-ethereum` is installed, copy `geth` located under `go-ethereum/build/bin` into` /usr/local/bin`:
-
-```bash
-$ ls go-ethereum/build/bin
-geth
-$ sudo cp build/bin/geth /usr/local/bin/
-$ which geth
-/usr/local/bin/geth
-```
-Now when you just type `geth`, it should work.
-
-Please note that `Geth` version should be greater or equal than `1.7.3`.
-
-```bash
-$ geth version|grep "Version: 1"
-Version: 1.7.3-stable
-```
-
-Please note that to update `geth`, please enter into `go-ethereum` directory and do:
-
-```
-git pull
-make geth
-```
-
-----------------------
+```` just google 'geth installation for windows' :) ```
 
 ## **eBloc Setup on Linux and macOS**
 
@@ -99,10 +61,10 @@ bash initialize.sh
 ### Server run (Always run with `sudo`)
 
 ```bash
-sudo bash server.sh
+bash server.sh
 ```
 
-- If you want to kill your server please do: `sudo killall geth`
+- If you want to kill your server please do: `ps` and find out the pid of geth and then do: `kill -9 <pidofgeth>`
 - You can keep track of output of your `geth-server` by running following: `sudo tail -f nohup.out` 
 
 ```
@@ -125,30 +87,7 @@ If you are successfully connected into `eblocPOA` network inside `geth` console;
 
 ### Create your Ethereum Account
 
-#### 1)
-
-```bash
-$ cd eblocPOA
-$ eblocPath="$PWD"
-$ geth --datadir="$eblocPath" account new
-Your new account is locked with a password. Please give a password. Do not forget this password.
-Passphrase:
-Repeat passphrase:
-Address: {a0a50a64cac0744dea5287d1025b8ef28aeff36e}
-```
-
-Your new account is locked with a password. Please give a password. Do not forget this password. Please enter a difficult passphrase for your account. 
-
-You should see your `Keystore File (UTC / JSON)`under `keystore` directory. 
-
-```
-[~/eblocPOA]$ ls keystore
-UTC--2018-02-14T10-46-54.423218000Z--a0a50a64cac0744dea5287d1025b8ef28aeff36e
-```
-
-#### 2) 
-
-You can also create your Ethereum account inside your `geth-client`. Here your `Keystore File` will be created with root permission, `eBlocWallet` will not able to unlock it.
+You can create your Ethereum account inside your `geth-client`. Here your `Keystore File` will be created with root permission, `eBlocWallet` will not able to unlock it.
 
 ```
 > personal.newAccount()
@@ -187,6 +126,8 @@ Please follow: https://github.com/ebloc/eBloc/issues/2
 - :warning: `geth-server` should be running on the background :warning: 
 
 #### Finally you should run following command
+
+##### DONT FORGET TO INSTALL PM2 ```npm install -g pm2```
 
 ```
 bash stats.sh

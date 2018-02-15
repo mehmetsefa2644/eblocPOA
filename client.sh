@@ -1,3 +1,3 @@
 #!/bin/bash
-DATADIR="$HOME/ebloc_POA";
-sudo geth --datadir "$DATADIR/private" attach ipc:$DATADIR/private/geth.ipc console
+DATADIR="/c/mehmetsefa/Dersler/CMPE483/eblocPOA"
+geth --datadir "$DATADIR/private" attach "http://localhost:8545" console
