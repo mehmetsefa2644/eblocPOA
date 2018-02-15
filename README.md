@@ -1,5 +1,5 @@
 # **WINDOWS VERSION**
-
+## I used git bash command line while configuration, I recommend you to do so
 # **Connect into Private Ethereum Blockchain (eBlocPOA)**
 
 ## **Preinstallations**
